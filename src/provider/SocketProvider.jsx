@@ -5,7 +5,7 @@ export const SocketContext = createContext(null);
 
 // eslint-disable-next-line react/prop-types
 export const SocketProvider = ({ children }) => {
-  const socket = useMemo(() => io("http://localhost:5000"), []);
+  const socket = useMemo(() => io("https://ss-rtc.uviom.com"), []);
 
   console.log("Socket", socket);
 

@@ -2,7 +2,16 @@ class PeerService {
   constructor() {
     if (!this.peer) {
       this.peer = new RTCPeerConnection({
-        iceServers: [{ urls: "stun:stun1.l.google.com:19302" }],
+        iceServers: [
+          { urls: "stun:stun1.l.google.com:19302" },
+
+          {
+            urls: "turn:turn.lm.uviom.com:3478?transport=tcp",
+            username: "PLabCAlUoUSi",
+            // eslint-disable-next-line no-useless-escape
+            credential: "I@1Spc%S!Za+q",
+          },
+        ],
       });
     }
   }
